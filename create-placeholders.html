@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #0F3057;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input, select {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        .image-list {
+            margin-top: 30px;
+        }
+        .image-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel Agency Placeholder Image Generator</h1>
+    <p>Use this tool to create placeholder images for the website. After creating an image, right-click on it and select "Save Image As..." to save it to your images folder.</p>
+    
+    <div class="controls">
+        <label for="width">Width:</label>
+        <input type="number" id="width" value="800" min="100" max="1920">
+        
+        <label for="height">Height:</label>
+        <input type="number" id="height" value="600" min="100" max="1080">
+        
+        <label for="text">Text:</label>
+        <input type="text" id="text" value="Contact Banner" style="width: 200px;">
+        
+        <label for="bgColor">Background:</label>
+        <select id="bgColor">
+            <option value="#0F3057">Navy Blue</option>
+            <option value="#1A5D1A">Dark Green</option>
+            <option value="#D4AF37">Light Gold</option>
+            <option value="#333333">Dark Gray</option>
+            <option value="#777777">Medium Gray</option>
+        </select>
+        
+        <button id="generate">Generate Image</button>
+    </div>
+    
+    <canvas id="canvas"></canvas>
+    
+    <div class="image-list">
+        <h2>Suggested Images to Create</h2>
+        <div class="image-item">
+            <strong>contact-banner.jpg</strong> - 1600x600px - "Contact Us Banner"
+        </div>
+        <div class="image-item">
+            <strong>office-beijing.jpg</strong> - 800x500px - "Beijing Office"
+        </div>
+        <div class="image-item">
+            <strong>office-shanghai.jpg</strong> - 800x500px - "Shanghai Office"
+        </div>
+        <div class="image-item">
+            <strong>office-chengdu.jpg</strong> - 800x500px - "Chengdu Office"
+        </div>
+        <div class="image-item">
+            <strong>office-guangzhou.jpg</strong> - 800x500px - "Guangzhou Office"
+        </div>
+        <div class="image-item">
+            <strong>map-placeholder.jpg</strong> - 1200x600px - "Office Location Map"
+        </div>
+        <div class="image-item">
+            <strong>wechat-qr.png</strong> - 400x400px - "WeChat QR Code"
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('generate').addEventListener('click', function() {
+            const width = parseInt(document.getElementById('width').value);
+            const height = parseInt(document.getElementById('height').value);
+            const text = document.getElementById('text').value;
+            const bgColor = document.getElementById('bgColor').value;
+            
+            const canvas = document.getElementById('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Add some design elements
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            for (let i = 0; i < 5; i++) {
+                const size = Math.min(width, height) * (0.3 + Math.random() * 0.5);
+                const x = Math.random() * width;
+                const y = Math.random() * height;
+                ctx.beginPath();
+                ctx.arc(x, y, size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // Text
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Main text
+            const fontSize = Math.min(width, height) * 0.08;
+            ctx.font = `bold ${fontSize}px Arial`;
+            ctx.fillText(text, width / 2, height / 2);
+            
+            // Subtitle
+            const subText = "唯伊旅行社 | Only Truth Travel Agency";
+            ctx.font = `${fontSize * 0.5}px Arial`;
+            ctx.fillText(subText, width / 2, height / 2 + fontSize);
+            
+            // Dimensions text
+            ctx.font = '16px Arial';
+            ctx.fillText(`${width} × ${height}px`, width / 2, height - 20);
+        });
+        
+        // Generate a default image on load
+        window.onload = function() {
+            document.getElementById('generate').click();
+        };
+    </script>
+</body>
+</html>

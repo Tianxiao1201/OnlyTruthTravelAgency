@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="唯伊旅行社 - 探索目的地 | Only Truth Travel Agency - Explore Destinations">
+    <title>探索目的地 | Explore Destinations - 唯伊旅行社</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Noto Sans SC and Noto Serif SC for Chinese -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <button id="lang-toggle" data-lang="zh">EN</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cn">唯伊旅行社</span>
+                    <span class="logo-en">Only Truth Travel Agency</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html"><span class="cn">首页</span><span class="en">Home</span></a></li>
+                    <li><a href="destinations.html" class="active"><span class="cn">目的地</span><span class="en">Destinations</span></a></li>
+                    <li><a href="custom.html"><span class="cn">定制服务</span><span class="en">Custom Travel</span></a></li>
+                    <li><a href="about.html"><span class="cn">关于我们</span><span class="en">About Us</span></a></li>
+                    <li><a href="reviews.html"><span class="cn">客户评价</span><span class="en">Reviews</span></a></li>
+                    <li><a href="contact.html"><span class="cn">联系我们</span><span class="en">Contact</span></a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>
+                <span class="cn">探索目的地</span>
+                <span class="en">Explore Destinations</span>
+            </h1>
+            <p>
+                <span class="cn">发现世界各地的独特体验，开启您的下一段旅程</span>
+                <span class="en">Discover unique experiences around the world and start your next journey</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="destination-filter">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label>
+                        <span class="cn">地区</span>
+                        <span class="en">Region</span>
+                    </label>
+                    <select id="region-filter">
+                        <option value="all">
+                            <span class="cn">所有地区</span>
+                            <span class="en">All Regions</span>
+                        </option>
+                        <option value="east">
+                            <span class="cn">东部地区</span>
+                            <span class="en">Eastern China</span>
+                        </option>
+                        <option value="west">
+                            <span class="cn">西部地区</span>
+                            <span class="en">Western China</span>
+                        </option>
+                        <option value="north">
+                            <span class="cn">北部地区</span>
+                            <span class="en">Northern China</span>
+                        </option>
+                        <option value="south">
+                            <span class="cn">南部地区</span>
+                            <span class="en">Southern China</span>
+                        </option>
+                        <option value="central">
+                            <span class="cn">中部地区</span>
+                            <span class="en">Central China</span>
+                        </option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <span class="cn">主题</span>
+                        <span class="en">Theme</span>
+                    </label>
+                    <select id="theme-filter">
+                        <option value="all">
+                            <span class="cn">所有主题</span>
+                            <span class="en">All Themes</span>
+                        </option>
+                        <option value="culture">
+                            <span class="cn">文化体验</span>
+                            <span class="en">Cultural Experience</span>
+                        </option>
+                        <option value="nature">
+                            <span class="cn">自然风光</span>
+                            <span class="en">Natural Scenery</span>
+                        </option>
+                        <option value="food">
+                            <span class="cn">美食之旅</span>
+                            <span class="en">Food Journey</span>
+                        </option>
+                        <option value="adventure">
+                            <span class="cn">探险活动</span>
+                            <span class="en">Adventure</span>
+                        </option>
+                        <option value="relaxation">
+                            <span class="cn">休闲放松</span>
+                            <span class="en">Relaxation</span>
+                        </option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <span class="cn">季节</span>
+                        <span class="en">Season</span>
+                    </label>
+                    <select id="season-filter">
+                        <option value="all">
+                            <span class="cn">全年</span>
+                            <span class="en">All Year</span>
+                        </option>
+                        <option value="spring">
+                            <span class="cn">春季</span>
+                            <span class="en">Spring</span>
+                        </option>
+                        <option value="summer">
+                            <span class="cn">夏季</span>
+                            <span class="en">Summer</span>
+                        </option>
+                        <option value="autumn">
+                            <span class="cn">秋季</span>
+                            <span class="en">Autumn</span>
+                        </option>
+                        <option value="winter">
+                            <span class="cn">冬季</span>
+                            <span class="en">Winter</span>
+                        </option>
+                    </select>
+                </div>
+                <button class="filter-button">
+                    <span class="cn">筛选</span>
+                    <span class="en">Filter</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations-grid">
+        <div class="container">
+            <div class="destinations-container">
+                <!-- 东部地区 -->
+                <div class="destination-category" data-region="east">
+                    <h2 class="category-title">
+                        <span class="cn">东部地区</span>
+                        <span class="en">Eastern China</span>
+                    </h2>
+                    <div class="destinations-row">
+                        <div class="destination-card" data-theme="culture" data-season="spring autumn">
+                            <div class="destination-image">
+                                <img src="images/destinations/hangzhou.jpg" alt="Hangzhou, China">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">杭州，浙江</span>
+                                    <span class="en">Hangzhou, Zhejiang</span>
+                                </h3>
+                                <p class="cn">西湖美景，龙井茶园，宋城千古情，灵隐寺，西溪湿地</p>
+                                <p class="en">West Lake scenery, Longjing tea plantations, Song Dynasty town, Lingyin Temple, Xixi Wetland</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">文化体验</span>
+                                        <span class="en">Cultural Experience</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">春季，秋季</span>
+                                        <span class="en">Spring, Autumn</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="destination-card" data-theme="nature relaxation" data-season="summer autumn">
+                            <div class="destination-image">
+                                <img src="images/destinations/huangshan.jpg" alt="Huangshan, China">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">黄山，安徽</span>
+                                    <span class="en">Huangshan, Anhui</span>
+                                </h3>
+                                <p class="cn">奇松怪石，云海日出，温泉养生，徽派古村</p>
+                                <p class="en">Unique pines and rocks, sea of clouds, hot springs, ancient Huizhou villages</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">自然风光，休闲放松</span>
+                                        <span class="en">Natural Scenery, Relaxation</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">夏季，秋季</span>
+                                        <span class="en">Summer, Autumn</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="destination-card" data-theme="food culture" data-season="all">
+                            <div class="destination-image">
+                                <img src="images/destinations/shanghai.jpg" alt="Shanghai, China">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">上海</span>
+                                    <span class="en">Shanghai</span>
+                                </h3>
+                                <p class="cn">外滩夜景，城隍庙美食，豫园，田子坊创意园，迪士尼乐园</p>
+                                <p class="en">The Bund night view, Chenghuang Temple food, Yu Garden, Tianzifang Creative Park, Disneyland</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">美食之旅，文化体验</span>
+                                        <span class="en">Food Journey, Cultural Experience</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">全年</span>
+                                        <span class="en">All Year</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 西部地区 -->
+                <div class="destination-category" data-region="west">
+                    <h2 class="category-title">
+                        <span class="cn">西部地区</span>
+                        <span class="en">Western China</span>
+                    </h2>
+                    <div class="destinations-row">
+                        <div class="destination-card" data-theme="culture food" data-season="spring autumn">
+                            <div class="destination-image">
+                                <img src="images/destinations/chengdu.jpg" alt="Chengdu, China">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">成都，四川</span>
+                                    <span class="en">Chengdu, Sichuan</span>
+                                </h3>
+                                <p class="cn">熊猫基地，川菜美食，锦里古街，宽窄巷子，青城山都江堰</p>
+                                <p class="en">Panda Base, Sichuan cuisine, Jinli Ancient Street, Wide and Narrow Alleys, Qingcheng Mountain</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">文化体验，美食之旅</span>
+                                        <span class="en">Cultural Experience, Food Journey</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">春季，秋季</span>
+                                        <span class="en">Spring, Autumn</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="destination-card" data-theme="nature adventure" data-season="summer">
+                            <div class="destination-image">
+                                <img src="images/destinations/jiuzhaigou.jpg" alt="Jiuzhaigou, China">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">九寨沟，四川</span>
+                                    <span class="en">Jiuzhaigou, Sichuan</span>
+                                </h3>
+                                <p class="cn">五彩池，珍珠滩瀑布，藏族文化，原始森林，高山湖泊</p>
+                                <p class="en">Five-Colored Pool, Pearl Shoal Waterfall, Tibetan culture, primitive forests, alpine lakes</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">自然风光，探险活动</span>
+                                        <span class="en">Natural Scenery, Adventure</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">夏季</span>
+                                        <span class="en">Summer</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="destination-card" data-theme="culture adventure" data-season="spring autumn">
+                            <div class="destination-image">
+                                <img src="images/destinations/lhasa.jpg" alt="Lhasa, Tibet">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">拉萨，西藏</span>
+                                    <span class="en">Lhasa, Tibet</span>
+                                </h3>
+                                <p class="cn">布达拉宫，大昭寺，纳木错，林芝桃花，雅鲁藏布大峡谷</p>
+                                <p class="en">Potala Palace, Jokhang Temple, Namtso Lake, Nyingchi peach blossoms, Yarlung Tsangpo Grand Canyon</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">文化体验，探险活动</span>
+                                        <span class="en">Cultural Experience, Adventure</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">春季，秋季</span>
+                                        <span class="en">Spring, Autumn</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 北部地区 -->
+                <div class="destination-category" data-region="north">
+                    <h2 class="category-title">
+                        <span class="cn">北部地区</span>
+                        <span class="en">Northern China</span>
+                    </h2>
+                    <div class="destinations-row">
+                        <div class="destination-card" data-theme="culture history" data-season="spring autumn">
+                            <div class="destination-image">
+                                <img src="images/destinations/beijing.jpg" alt="Beijing, China">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">北京</span>
+                                    <span class="en">Beijing</span>
+                                </h3>
+                                <p class="cn">故宫博物院，长城，颐和园，天坛，胡同文化，北京烤鸭</p>
+                                <p class="en">Forbidden City, Great Wall, Summer Palace, Temple of Heaven, Hutong culture, Peking duck</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">文化体验，历史探索</span>
+                                        <span class="en">Cultural Experience, Historical Exploration</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">春季，秋季</span>
+                                        <span class="en">Spring, Autumn</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="destination-card" data-theme="nature adventure" data-season="winter">
+                            <div class="destination-image">
+                                <img src="images/destinations/harbin.jpg" alt="Harbin, China">
+                                <div class="destination-overlay">
+                                    <a href="#" class="destination-link">
+                                        <span class="cn">探索路线</span>
+                                        <span class="en">Explore Routes</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>
+                                    <span class="cn">哈尔滨，黑龙江</span>
+                                    <span class="en">Harbin, Heilongjiang</span>
+                                </h3>
+                                <p class="cn">冰雪大世界，中央大街，松花江冬泳，亚布力滑雪，俄罗斯风情</p>
+                                <p class="en">Ice and Snow World, Central Street, Songhua River winter swimming, Yabuli skiing, Russian style</p>
+                                <div class="destination-meta">
+                                    <span class="theme">
+                                        <i class="fas fa-tag"></i>
+                                        <span class="cn">自然风光，探险活动</span>
+                                        <span class="en">Natural Scenery, Adventure</span>
+                                    </span>
+                                    <span class="season">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="cn">冬季</span>
+                                        <span class="en">Winter</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More destination categories can be added here -->
+
+                <div class="load-more">
+                    <button class="load-more-button">
+                        <span class="cn">加载更多目的地</span>
+                        <span class="en">Load More Destinations</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="destination-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>
+                    <span class="cn">没有找到您心仪的目的地？</span>
+                    <span class="en">Haven't found your ideal destination?</span>
+                </h2>
+                <p class="cn">我们的旅行顾问可以根据您的喜好和需求，为您量身定制专属旅行计划</p>
+                <p class="en">Our travel consultants can tailor a personalized travel plan based on your preferences and needs</p>
+                <a href="custom.html" class="cta-button primary">
+                    <span class="cn">立即定制</span>
+                    <span class="en">Custom Travel Now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-cn">唯伊旅行社</span>
+                        <span class="logo-en">Only Truth Travel Agency</span>
+                    </div>
+                    <p class="cn">专注于为追求高品质旅行体验的客户提供真实、定制化的旅行服务</p>
+                    <p class="en">Focused on providing authentic, customized travel services for clients seeking high-quality travel experiences</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                        <a href="#" aria-label="Weibo"><i class="fab fa-weibo"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>
+                        <span class="cn">快速链接</span>
+                        <span class="en">Quick Links</span>
+                    </h3>
+                    <ul>
+                        <li><a href="index.html">
+                            <span class="cn">首页</span>
+                            <span class="en">Home</span>
+                        </a></li>
+                        <li><a href="destinations.html">
+                            <span class="cn">目的地</span>
+                            <span class="en">Destinations</span>
+                        </a></li>
+                        <li><a href="custom.html">
+                            <span class="cn">定制服务</span>
+                            <span class="en">Custom Travel</span>
+                        </a></li>
+                        <li><a href="about.html">
+                            <span class="cn">关于我们</span>
+                            <span class="en">About Us</span>
+                        </a></li>
+                        <li><a href="reviews.html">
+                            <span class="cn">客户评价</span>
+                            <span class="en">Reviews</span>
+                        </a></li>
+                        <li><a href="contact.html">
+                            <span class="cn">联系我们</span>
+                            <span class="en">Contact</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>
+                        <span class="cn">订阅通讯</span>
+                        <span class="en">Newsletter</span>
+                    </h3>
+                    <p class="cn">订阅我们的通讯，获取最新的旅行灵感和独家优惠</p>
+                    <p class="en">Subscribe to our newsletter for the latest travel inspiration and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    <span class="cn">© 2025 唯伊旅行社. 保留所有权利.</span>
+                    <span class="en">© 2025 Only Truth Travel Agency. All rights reserved.</span>
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#">
+                        <span class="cn">隐私政策</span>
+                        <span class="en">Privacy Policy</span>
+                    </a>
+                    <a href="#">
+                        <span class="cn">条款与条件</span>
+                        <span class="en">Terms & Conditions</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

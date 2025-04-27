@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="唯伊旅行社 - 客户评价 | Only Truth Travel Agency - Client Reviews">
+    <title>客户评价 | Client Reviews - 唯伊旅行社</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Noto Sans SC and Noto Serif SC for Chinese -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switcher">
+        <button id="lang-toggle" data-lang="zh">EN</button>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-cn">唯伊旅行社</span>
+                    <span class="logo-en">Only Truth Travel Agency</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html"><span class="cn">首页</span><span class="en">Home</span></a></li>
+                    <li><a href="destinations.html"><span class="cn">目的地</span><span class="en">Destinations</span></a></li>
+                    <li><a href="custom.html"><span class="cn">定制服务</span><span class="en">Custom Travel</span></a></li>
+                    <li><a href="about.html"><span class="cn">关于我们</span><span class="en">About Us</span></a></li>
+                    <li><a href="reviews.html" class="active"><span class="cn">客户评价</span><span class="en">Reviews</span></a></li>
+                    <li><a href="contact.html"><span class="cn">联系我们</span><span class="en">Contact</span></a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner reviews-banner">
+        <div class="banner-content">
+            <h1>
+                <span class="cn">客户评价</span>
+                <span class="en">Client Reviews</span>
+            </h1>
+            <p>
+                <span class="cn">听听我们客户的真实体验和感受</span>
+                <span class="en">Hear about our clients' authentic experiences and feelings</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="reviews-intro">
+        <div class="container">
+            <div class="reviews-stats">
+                <div class="stats-item">
+                    <div class="stats-number">4.9</div>
+                    <div class="stats-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>
+                        <span class="cn">平均评分</span>
+                        <span class="en">Average Rating</span>
+                    </p>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-number">98%</div>
+                    <p>
+                        <span class="cn">推荐率</span>
+                        <span class="en">Recommendation Rate</span>
+                    </p>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-number">1,200+</div>
+                    <p>
+                        <span class="cn">客户评价</span>
+                        <span class="en">Client Reviews</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-grid-section">
+        <div class="container">
+            <div class="reviews-filter">
+                <h3>
+                    <span class="cn">按目的地筛选</span>
+                    <span class="en">Filter by Destination</span>
+                </h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <span class="cn">全部</span>
+                        <span class="en">All</span>
+                    </button>
+                    <button class="filter-btn" data-filter="beijing">
+                        <span class="cn">北京</span>
+                        <span class="en">Beijing</span>
+                    </button>
+                    <button class="filter-btn" data-filter="shanghai">
+                        <span class="cn">上海</span>
+                        <span class="en">Shanghai</span>
+                    </button>
+                    <button class="filter-btn" data-filter="chengdu">
+                        <span class="cn">成都</span>
+                        <span class="en">Chengdu</span>
+                    </button>
+                    <button class="filter-btn" data-filter="hangzhou">
+                        <span class="cn">杭州</span>
+                        <span class="en">Hangzhou</span>
+                    </button>
+                    <button class="filter-btn" data-filter="tibet">
+                        <span class="cn">西藏</span>
+                        <span class="en">Tibet</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- 北京评价 -->
+                <div class="review-card" data-destination="beijing">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="images/avatar-1.jpg" alt="王先生">
+                            </div>
+                            <div>
+                                <h3>
+                                    <span class="cn">王先生</span>
+                                    <span class="en">Mr. Wang</span>
+                                </h3>
+                                <div class="review-meta">
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-date">2024-03-15</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-destination">
+                            <span class="cn">北京文化之旅</span>
+                            <span class="en">Beijing Cultural Tour</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="cn">这是我第三次来北京，但在唯伊旅行社的安排下，我发现了一个全新的北京。导游对历史和文化的深入了解让我们的故宫之行变得格外有意义。特别是安排的胡同晚餐和京剧体验，让我们感受到了真正的老北京文化。非常感谢唯伊团队的用心安排！</p>
+                        <p class="en">This was my third visit to Beijing, but with Only Truth Travel Agency's arrangements, I discovered a completely new Beijing. The guide's in-depth knowledge of history and culture made our Forbidden City tour especially meaningful. The hutong dinner and Peking Opera experience were particularly special, allowing us to feel the authentic culture of old Beijing. Many thanks to the Only Truth team for their thoughtful arrangements!</p>
+                    </div>
+                </div>
+
+                <!-- 上海评价 -->
+                <div class="review-card" data-destination="shanghai">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="images/avatar-2.jpg" alt="林女士">
+                            </div>
+                            <div>
+                                <h3>
+                                    <span class="cn">林女士</span>
+                                    <span class="en">Ms. Lin</span>
+                                </h3>
+                                <div class="review-meta">
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-date">2024-02-20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-destination">
+                            <span class="cn">上海都市探索</span>
+                            <span class="en">Shanghai Urban Exploration</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="cn">唯伊旅行社为我们安排的上海之旅完美平衡了现代与传统。白天参观了外滩和豫园，晚上则在外滩欣赏夜景，还参加了一个私人烹饪课，学习了如何制作上海本地美食。住宿的精品酒店位置绝佳，服务一流。整个行程既轻松又充实，非常满意！</p>
+                        <p class="en">The Shanghai tour arranged by Only Truth Travel Agency perfectly balanced modern and traditional elements. During the day we visited the Bund and Yu Garden, and in the evening we enjoyed the night view of the Bund and attended a private cooking class to learn how to make local Shanghai cuisine. The boutique hotel where we stayed had an excellent location and first-class service. The whole journey was both relaxing and fulfilling, very satisfying!</p>
+                    </div>
+                </div>
+
+                <!-- 成都评价 -->
+                <div class="review-card" data-destination="chengdu">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="images/avatar-3.jpg" alt="张先生和家人">
+                            </div>
+                            <div>
+                                <h3>
+                                    <span class="cn">张先生和家人</span>
+                                    <span class="en">Mr. Zhang & Family</span>
+                                </h3>
+                                <div class="review-meta">
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-date">2023-10-05</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-destination">
+                            <span class="cn">成都熊猫之旅</span>
+                            <span class="en">Chengdu Panda Tour</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="cn">带着两个孩子去成都，最大的心愿就是近距离看大熊猫。唯伊旅行社不仅安排了熊猫基地的VIP参观，还为我们预约了志愿者活动，孩子们能亲手准备熊猫的食物。除了熊猫，我们还体验了正宗的川菜烹饪课，品尝了各种地道小吃。整个行程对孩子非常友好，处处为家庭出行考虑周到。</p>
+                        <p class="en">Taking two children to Chengdu, our biggest wish was to see giant pandas up close. Only Truth Travel Agency not only arranged a VIP visit to the Panda Base, but also booked a volunteer activity for us where the children could prepare food for the pandas themselves. Besides pandas, we also experienced an authentic Sichuan cuisine cooking class and tasted various local snacks. The whole itinerary was very child-friendly, with thoughtful considerations for family travel throughout.</p>
+                    </div>
+                </div>
+
+                <!-- 杭州评价 -->
+                <div class="review-card" data-destination="hangzhou">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="images/avatar-4.jpg" alt="李女士">
+                            </div>
+                            <div>
+                                <h3>
+                                    <span class="cn">李女士</span>
+                                    <span class="en">Ms. Li</span>
+                                </h3>
+                                <div class="review-meta">
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="review-date">2023-11-12</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-destination">
+                            <span class="cn">杭州西湖之旅</span>
+                            <span class="en">Hangzhou West Lake Tour</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="cn">杭州的西湖美景确实名不虚传，而唯伊旅行社的安排让这次旅行更加特别。清晨的私人船游让我们避开了游客高峰，在宁静的湖面上欣赏西湖十景。龙井茶园的参观和品茶体验也非常难忘。导游对杭州的历史和文化如数家珍，让整个旅程充满了知识性和趣味性。</p>
+                        <p class="en">The beautiful scenery of West Lake in Hangzhou is truly well-deserved of its fame, and Only Truth Travel Agency's arrangements made this trip even more special. The private boat tour in the early morning allowed us to avoid the tourist peak and enjoy the Ten Scenes of West Lake on the quiet lake. The visit to the Longjing tea plantation and tea tasting experience were also very memorable. The guide was extremely knowledgeable about Hangzhou's history and culture, making the whole journey full of knowledge and interest.</p>
+                    </div>
+                </div>
+
+                <!-- 西藏评价 -->
+                <div class="review-card" data-destination="tibet">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="images/avatar-5.jpg" alt="陈先生">
+                            </div>
+                            <div>
+                                <h3>
+                                    <span class="cn">陈先生</span>
+                                    <span class="en">Mr. Chen</span>
+                                </h3>
+                                <div class="review-meta">
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-date">2023-08-18</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-destination">
+                            <span class="cn">西藏灵魂之旅</span>
+                            <span class="en">Tibet Soul Journey</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="cn">西藏之行是我人生中最难忘的旅行经历之一。唯伊旅行社在高原适应、行程安排和文化体验方面都做得非常专业。我们不仅参观了布达拉宫和大昭寺等著名景点，还有机会与当地藏族家庭共进晚餐，了解他们的日常生活。在纳木错湖畔的星空露营更是此行的亮点。感谢唯伊团队让我们安全、舒适地完成了这次心灵之旅。</p>
+                        <p class="en">The Tibet trip was one of the most unforgettable travel experiences of my life. Only Truth Travel Agency was very professional in terms of altitude adaptation, itinerary arrangement, and cultural experiences. We not only visited famous attractions like the Potala Palace and Jokhang Temple, but also had the opportunity to have dinner with local Tibetan families and learn about their daily lives. The stargazing camping by Namtso Lake was a highlight of the trip. Thank you to the Only Truth team for allowing us to complete this spiritual journey safely and comfortably.</p>
+                    </div>
+                </div>
+
+                <!-- 北京评价 -->
+                <div class="review-card" data-destination="beijing">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="images/avatar-6.jpg" alt="赵女士">
+                            </div>
+                            <div>
+                                <h3>
+                                    <span class="cn">赵女士</span>
+                                    <span class="en">Ms. Zhao</span>
+                                </h3>
+                                <div class="review-meta">
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-date">2024-01-10</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-destination">
+                            <span class="cn">北京美食探索</span>
+                            <span class="en">Beijing Food Exploration</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="cn">作为一个美食爱好者，我选择了唯伊旅行社的北京美食之旅，这个决定太正确了！他们带我们走访了许多本地人才知道的隐藏美食地点，从老字号的北京烤鸭到胡同里的小吃摊，每一站都令人惊喜。最特别的是，我们还参观了一个传统的北京四合院，并在那里学习制作正宗的北京饺子。导游对北京美食文化的解说非常专业，让整个美食之旅既有味觉享受，又有文化收获。</p>
+                        <p class="en">As a food enthusiast, I chose Only Truth Travel Agency's Beijing food tour, and this decision was absolutely right! They took us to many hidden food spots that only locals know about, from time-honored Peking duck restaurants to snack stalls in hutongs, each stop was a delightful surprise. Most special was our visit to a traditional Beijing courtyard where we learned to make authentic Beijing dumplings. The guide's explanation of Beijing's food culture was very professional, making the entire food tour both a taste enjoyment and a cultural harvest.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more-container">
+                <button class="load-more-button">
+                    <span class="cn">加载更多评价</span>
+                    <span class="en">Load More Reviews</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="review-form-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="cn">分享您的体验</span>
+                <span class="en">Share Your Experience</span>
+            </h2>
+            <div class="review-form-container">
+                <form class="review-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>
+                                <span class="cn">姓名</span>
+                                <span class="en">Name</span>
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="cn">电子邮件</span>
+                                <span class="en">Email</span>
+                                <span class="required">*</span>
+                            </label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="cn">旅行目的地</span>
+                                <span class="en">Travel Destination</span>
+                                <span class="required">*</span>
+                            </label>
+                            <select required>
+                                <option value="">
+                                    <span class="cn">请选择</span>
+                                    <span class="en">Please select</span>
+                                </option>
+                                <option value="beijing">
+                                    <span class="cn">北京</span>
+                                    <span class="en">Beijing</span>
+                                </option>
+                                <option value="shanghai">
+                                    <span class="cn">上海</span>
+                                    <span class="en">Shanghai</span>
+                                </option>
+                                <option value="chengdu">
+                                    <span class="cn">成都</span>
+                                    <span class="en">Chengdu</span>
+                                </option>
+                                <option value="hangzhou">
+                                    <span class="cn">杭州</span>
+                                    <span class="en">Hangzhou</span>
+                                </option>
+                                <option value="tibet">
+                                    <span class="cn">西藏</span>
+                                    <span class="en">Tibet</span>
+                                </option>
+                                <option value="other">
+                                    <span class="cn">其他</span>
+                                    <span class="en">Other</span>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <span class="cn">评分</span>
+                                <span class="en">Rating</span>
+                                <span class="required">*</span>
+                            </label>
+                            <div class="rating-select">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>
+                                <span class="cn">您的评价</span>
+                                <span class="en">Your Review</span>
+                                <span class="required">*</span>
+                            </label>
+                            <textarea rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="submit-button">
+                            <span class="cn">提交评价</span>
+                            <span class="en">Submit Review</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-cn">唯伊旅行社</span>
+                        <span class="logo-en">Only Truth Travel Agency</span>
+                    </div>
+                    <p class="cn">专注于为追求高品质旅行体验的客户提供真实、定制化的旅行服务</p>
+                    <p class="en">Focused on providing authentic, customized travel services for clients seeking high-quality travel experiences</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                        <a href="#" aria-label="Weibo"><i class="fab fa-weibo"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>
+                        <span class="cn">快速链接</span>
+                        <span class="en">Quick Links</span>
+                    </h3>
+                    <ul>
+                        <li><a href="index.html">
+                            <span class="cn">首页</span>
+                            <span class="en">Home</span>
+                        </a></li>
+                        <li><a href="destinations.html">
+                            <span class="cn">目的地</span>
+                            <span class="en">Destinations</span>
+                        </a></li>
+                        <li><a href="custom.html">
+                            <span class="cn">定制服务</span>
+                            <span class="en">Custom Travel</span>
+                        </a></li>
+                        <li><a href="about.html">
+                            <span class="cn">关于我们</span>
+                            <span class="en">About Us</span>
+                        </a></li>
+                        <li><a href="reviews.html">
+                            <span class="cn">客户评价</span>
+                            <span class="en">Reviews</span>
+                        </a></li>
+                        <li><a href="contact.html">
+                            <span class="cn">联系我们</span>
+                            <span class="en">Contact</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>
+                        <span class="cn">订阅通讯</span>
+                        <span class="en">Newsletter</span>
+                    </h3>
+                    <p class="cn">订阅我们的通讯，获取最新的旅行灵感和独家优惠</p>
+                    <p class="en">Subscribe to our newsletter for the latest travel inspiration and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    <span class="cn">© 2025 唯伊旅行社. 保留所有权利.</span>
+                    <span class="en">© 2025 Only Truth Travel Agency. All rights reserved.</span>
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#">
+                        <span class="cn">隐私政策</span>
+                        <span class="en">Privacy Policy</span>
+                    </a>
+                    <a href="#">
+                        <span class="cn">条款与条件</span>
+                        <span class="en">Terms & Conditions</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
